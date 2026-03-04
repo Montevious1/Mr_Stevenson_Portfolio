@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>JavaScript Quiz Game</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JavaScript Quiz Game</title>
+
+<!-- Cache busting so GitHub loads newest CSS -->
+<link rel="stylesheet" href="style.css?v=3">
+
 </head>
+
 <body>
 
 <header class="header">
-  <h1>JavaScript Quiz Game</h1>
-  <p>Certification-style practice • Timed quiz • Best score saved</p>
+<h1>JavaScript Quiz Game</h1>
+<p>Certification Practice • Timed Questions • Best Score Saved</p>
 </header>
 
 <main class="container">
 
-  <section class="card">
-    <div class="row">
-      <div class="pill">Time: <strong id="time">60</strong>s</div>
-      <div class="pill">Score: <strong id="score">0</strong></div>
-      <div class="pill">Best: <strong id="bestScore">0</strong></div>
-    </div>
+<section class="card">
 
-    <h2 id="question">Press Start to begin</h2>
+<div class="row">
+<div class="pill">Time: <strong id="time">60</strong></div>
+<div class="pill">Score: <strong id="score">0</strong></div>
+<div class="pill">Best: <strong id="bestScore">0</strong></div>
+</div>
 
-    <div id="choices" class="choices">
-      <!-- buttons injected here -->
-    </div>
+<h2 id="question">Press Start to Begin</h2>
 
-    <p id="feedback" class="feedback"></p>
+<div id="choices" class="choices">
+<!-- answer buttons appear here -->
+</div>
 
-    <div class="actions">
-      <button id="startBtn">Start Quiz</button>
-      <button id="restartBtn" class="secondary">Restart</button>
-    </div>
+<p id="feedback" class="feedback"></p>
 
-  </section>
+<div class="actions">
+<button id="startBtn">Start Quiz</button>
+<button id="restartBtn" class="secondary">Restart</button>
+</div>
 
-  <section class="card">
-    <h3>How this prepares students for IBC</h3>
-    <p>
-      This quiz reinforces JavaScript fundamentals (variables, data types, conditionals, loops,
-      DOM concepts, and debugging) using timed, exam-style questions and immediate feedback.
-    </p>
-  </section>
+</section>
 
 </main>
 
-<script src="script.js?v=1"></script>
+<!-- Cache busting ensures newest JS loads -->
+<script src="script.js?v=3"></script>
+
 </body>
 </html>
