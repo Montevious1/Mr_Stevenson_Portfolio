@@ -1,41 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Kanban Task Manager</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kanban Task Manager</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
+<header>
 <h1>Kanban Task Manager</h1>
+<p>Drag tasks between columns • Edit • Delete • Saved with LocalStorage</p>
+</header>
 
-<div class="input-area">
-  <input type="text" id="taskInput" placeholder="Enter task...">
-  <select id="priority">
-    <option value="Low">Low</option>
-    <option value="Medium">Medium</option>
-    <option value="High">High</option>
-  </select>
-  <button onclick="addTask()">Add Task</button>
+<section class="taskInputArea">
+
+<input 
+id="taskInput"
+type="text"
+placeholder="Enter a task..."
+>
+
+<select id="priority">
+<option value="Low">Low</option>
+<option value="Medium" selected>Medium</option>
+<option value="High">High</option>
+</select>
+
+<button id="addBtn">Add Task</button>
+
+</section>
+
+<section class="board">
+
+<div class="column">
+
+<h2>To Do</h2>
+
+<div
+class="dropzone"
+id="todo"
+>
+
 </div>
 
-<div class="board">
-  <div class="column">
-    <h2>To Do</h2>
-    <div id="todo"></div>
-  </div>
-
-  <div class="column">
-    <h2>In Progress</h2>
-    <div id="inprogress"></div>
-  </div>
-
-  <div class="column">
-    <h2>Done</h2>
-    <div id="done"></div>
-  </div>
 </div>
 
-<script src="script.js"></script>
+<div class="column">
+
+<h2>In Progress</h2>
+
+<div
+class="dropzone"
+id="inprogress"
+>
+
+</div>
+
+</div>
+
+<div class="column">
+
+<h2>Done</h2>
+
+<div
+class="dropzone"
+id="done"
+>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Cache busting ensures GitHub loads newest JS -->
+<script src="script.js?v=2"></script>
+
 </body>
 </html>
