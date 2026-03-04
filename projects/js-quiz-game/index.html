@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="header">
+  <h1>JavaScript Quiz Game</h1>
+  <p>Certification-style practice • Timed quiz • Best score saved</p>
+</header>
+
+<main class="container">
+
+  <section class="card">
+    <div class="row">
+      <div class="pill">Time: <strong id="time">60</strong>s</div>
+      <div class="pill">Score: <strong id="score">0</strong></div>
+      <div class="pill">Best: <strong id="bestScore">0</strong></div>
+    </div>
+
+    <h2 id="question">Press Start to begin</h2>
+
+    <div id="choices" class="choices">
+      <!-- buttons injected here -->
+    </div>
+
+    <p id="feedback" class="feedback"></p>
+
+    <div class="actions">
+      <button id="startBtn">Start Quiz</button>
+      <button id="restartBtn" class="secondary">Restart</button>
+    </div>
+
+  </section>
+
+  <section class="card">
+    <h3>How this prepares students for IBC</h3>
+    <p>
+      This quiz reinforces JavaScript fundamentals (variables, data types, conditionals, loops,
+      DOM concepts, and debugging) using timed, exam-style questions and immediate feedback.
+    </p>
+  </section>
+
+</main>
+
+<script src="script.js?v=1"></script>
+</body>
+</html>
