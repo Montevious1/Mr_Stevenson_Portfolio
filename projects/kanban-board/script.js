@@ -1,5 +1,8 @@
 function renderTasks() {
 
+  let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+let draggingTaskId = null;
   document.getElementById("todo").innerHTML = "";
   document.getElementById("inprogress").innerHTML = "";
   document.getElementById("done").innerHTML = "";
