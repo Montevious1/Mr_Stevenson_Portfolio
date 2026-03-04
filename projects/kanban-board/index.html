@@ -1,86 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kanban Task Manager</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kanban Task Manager</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-<h1>Kanban Task Manager</h1>
-<p>Drag tasks between columns • Edit • Delete • Saved with LocalStorage</p>
+<header class="header">
+  <h1>Kanban Task Manager</h1>
+  <p>Drag & drop tasks • Edit • Delete • Saved with LocalStorage</p>
 </header>
 
-<section class="taskInputArea">
+<main class="container">
 
-<input 
-id="taskInput"
-type="text"
-placeholder="Enter a task..."
->
+  <section class="card">
+    <h2>Add Task</h2>
 
-<select id="priority">
-<option value="Low">Low</option>
-<option value="Medium" selected>Medium</option>
-<option value="High">High</option>
-</select>
+    <div class="input-area">
+      <input id="taskInput" type="text" placeholder="Enter a task..." />
+      <select id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium" selected>Medium</option>
+        <option value="High">High</option>
+      </select>
+      <button id="addBtn" type="button">Add Task</button>
+      <button id="clearBtn" type="button" class="danger">Clear All</button>
+    </div>
 
-<button id="addBtn">Add Task</button>
+    <p class="hint" id="message" aria-live="polite"></p>
+  </section>
 
-</section>
+  <section class="board">
+    <div class="column" data-status="todo">
+      <div class="colHeader">
+        <h3>To Do</h3>
+        <span class="pill" id="countTodo">0</span>
+      </div>
+      <div class="dropzone" id="todo"></div>
+    </div>
 
-<section class="board">
+    <div class="column" data-status="inprogress">
+      <div class="colHeader">
+        <h3>In Progress</h3>
+        <span class="pill" id="countInprogress">0</span>
+      </div>
+      <div class="dropzone" id="inprogress"></div>
+    </div>
 
-<div class="column">
+    <div class="column" data-status="done">
+      <div class="colHeader">
+        <h3>Done</h3>
+        <span class="pill" id="countDone">0</span>
+      </div>
+      <div class="dropzone" id="done"></div>
+    </div>
+  </section>
 
-<h2>To Do</h2>
+</main>
 
-<div
-class="dropzone"
-id="todo"
->
-
-</div>
-
-</div>
-
-<div class="column">
-
-<h2>In Progress</h2>
-
-<div
-class="dropzone"
-id="inprogress"
->
-
-</div>
-
-</div>
-
-<div class="column">
-
-<h2>Done</h2>
-
-<div
-class="dropzone"
-id="done"
->
-
-</div>
-
-</div>
-
-</section>
-
-<!-- Cache busting ensures GitHub loads newest JS -->
-<script src="script.js?v=2"></script>
-
+<!-- Cache-bust so GitHub Pages loads the newest JS -->
+<script src="script.js?v=100"></script>
 </body>
 </html>
