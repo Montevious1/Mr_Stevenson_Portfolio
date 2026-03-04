@@ -87,7 +87,7 @@ cursor:pointer;
 font-weight:700;
 
 /* THIS FIXES THE BLANK BUTTON ISSUE */
-color:#111827;
+color:black;
 }
 
 .choiceBtn:hover{
