@@ -107,4 +107,4 @@ document.querySelectorAll(".dropzone").forEach(zone => {
 renderTasks();
 }
 
-renderTasks();
+
