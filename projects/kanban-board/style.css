@@ -66,6 +66,8 @@ button{
   cursor:pointer;
 }
 
+button.danger{ background:var(--danger); }
+
 .hint{
   margin:10px 0 0;
   color:var(--muted);
@@ -129,39 +131,47 @@ button{
 .taskTop{
   display:flex;
   justify-content:space-between;
-  gap:8px;
   align-items:flex-start;
+  gap:8px;
 }
 
-body {
-  font-family: Arial;
-  background: #f4f6f9;
-  text-align: center;
+.taskTitle{
+  font-weight:700;
+  line-height:1.2;
 }
 
-.input-area {
-  margin: 20px;
+.taskMeta{
+  margin-top:8px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
 }
 
-.board {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+.badge{
+  background:rgba(255,255,255,0.22);
+  padding:4px 8px;
+  border-radius:999px;
+  font-size:12px;
 }
 
-.column {
-  background: white;
-  width: 30%;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.taskBtns{
+  display:flex;
+  gap:6px;
 }
 
-.task {
-  background: #2563eb;
-  color: white;
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
+.smallBtn{
+  border:none;
+  border-radius:8px;
+  padding:6px 8px;
+  font-size:12px;
+  font-weight:700;
+  cursor:pointer;
+  background:#111827;
+  color:#fff;
+}
+.smallBtn.delete{ background:var(--danger); }
+
+@media (max-width: 900px){
+  .board{ grid-template-columns:1fr; }
 }
